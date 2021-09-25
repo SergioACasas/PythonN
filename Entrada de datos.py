@@ -1,0 +1,8 @@
+palabra = input("Introduce una palabra : ")
+num_int = int(input("Introduce un numero entero : "))
+num_float = float(input("Introduce un numero flotante : "))
+num_complx = complex(input("introduce un numero complejo : "))
+print("tu palabra es : ",palabra)
+print("el numero entero es : ",num_int)
+print("el flotante es : ",num_float)
+print("y el complejo es : ",num_complx)
