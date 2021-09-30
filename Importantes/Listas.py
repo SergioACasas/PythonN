@@ -15,14 +15,14 @@ print(My_lista[2:])
 #MOstramos solo pepe y marta
 print(My_lista[1:3])
 print("Aumentamos la lista")
-#Añadimos algo al final de la lista
+#Añadimos un OBJETO:(una lista, documento, letra, numero, etc,)  al final de la lista
 nm = str(input("ingrese un nuevo nombre la lista : "))
 My_lista.append(nm)
 print(My_lista)
 nm = str(input("ingrese un nuevo nombre la lista : "))
 My_lista.insert(int(input("ingrese la posicion en la cual insertar : ")),nm)
 print(My_lista)
-#Ahora aumentaremos una lista con otra
+#Ahora aumentaremos una lista con otra Asi añadimos MULTIPLES ELEMENTOS no solo un objeto como con append
 My_lista.extend(["Jhon","Gabriela","Carolina"])
 print(My_lista)
 #Busscar la posicion de un nombre

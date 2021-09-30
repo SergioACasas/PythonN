@@ -9,7 +9,7 @@ print("¿no esta 'palabra' en la oracion?","palabras" not in string)
 print("¿Cuantas veces esta la palabra 'hay' :",string.count("hay"))
 print("¿Cuantas veces esta la palabra 'mono' :",string.count("mono"))
 print("¿Cuantas veces esta la letra 'a' :",string.count("a"))
-#Podemos saber el tamaño de la oracion con len()
+#Podemos saber el tamaño de la oracion con len() devuelve un int
 print("el tamaño de la primera oracion es de :",len(string))
 #Podemos acceder una letra en una posicion o un grupo
 print("mostraremos el espacio 7 :",string[6])
