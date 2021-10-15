@@ -1,0 +1,15 @@
+Flashtext
+Loguru
+
+
+Modulos que tengo
+
+face-recognition
+matplotlib
+qt5, qt5-tools
+opencv-contrib-python
+pillow
+
+para crear un ejecutable sin consola
+
+>>>pyinstaller --onefile -w name.py
