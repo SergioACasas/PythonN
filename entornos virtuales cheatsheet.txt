@@ -1,0 +1,33 @@
+virtualenv-------------------------------------------------------------------
+
+#ver todo lo instalado en un ENV o GLOBAL
+		pip list
+#Crear una lista 'request' para instalar dependencias luego
+#el segundo es para los modulos dentro de un VENV
+		pip freeze > requirementes.txt
+		pip freeze --local >requirements.txt
+
+#crear una carpeta pare el nuevo entorono virtual
+	  mkdir Nombre_de_carpeta
+
+#ir a la carpeta
+		 cd !$
+
+#Creamos un nuevo en entorno virtual
+	virtualenv Nombre_de_ENV
+
+#Activamos el entorno
+#se crea una carpeta con el nombre bin o scripts y se busca
+#un archivo activate para entrar en el entornovirtual
+
+   source Nombre_de_ENV/Scripts/activate
+
+#Desactivamos
+   deactivate
+
+#Eliminamos un enviroment
+	rm -rf Nombre_de_ENV
+
+VENV-----------------------------------------------------------------------
+
+python -m venv NombreENV
