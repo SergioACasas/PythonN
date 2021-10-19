@@ -1,2 +1,19 @@
 crear un visualizado de imagenes que agrege imagenes mientras 
 vas seleccionando, y las quite cuando las saques
+ f
+        """            self.ini == int(len(file))
+        identidad="img"+str(self.ini)
+        print(identidad)"""
+        try:
+            img=Image(source=file)
+
+        except:
+            print("Fallo")
+"""        elif self.ini> file:
+            self.ini == int(len(file))
+            self.remove_widget()"""
+"""         try:
+            self.ids.image1.source =file[0] # obtiene el path, si se pasa self, usa .selection
+            print(file)
+        except:
+            print("no se logro recuperar el archivo") """
