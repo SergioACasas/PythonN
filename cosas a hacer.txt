@@ -1,0 +1,2 @@
+crear un visualizado de imagenes que agrege imagenes mientras 
+vas seleccionando, y las quite cuando las saques

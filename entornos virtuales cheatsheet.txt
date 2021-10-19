@@ -22,6 +22,9 @@ virtualenv-------------------------------------------------------------------
 
    source Nombre_de_ENV/Scripts/activate
 
+#Instalamos  requirements.txt con los modulos y dependencias
+	  pip install -r requirements.txt
+	
 #Desactivamos
    deactivate
 
@@ -31,3 +34,13 @@ virtualenv-------------------------------------------------------------------
 VENV-----------------------------------------------------------------------
 
 python -m venv NombreENV
+
+
+
+
+idea 
+
+para imagenes que no son cuadrados se puede revisar si estan
+en alguna coordenada de texto y si no entonces es una imagen 
+usar cv2.boundrectangle para saber donde esta y copiar las 
+coordenadas con la umagen
