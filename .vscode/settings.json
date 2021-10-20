@@ -1,3 +1,4 @@
 {
-    "editor.maxTokenizationLineLength": 2000
+    "editor.maxTokenizationLineLength": 2000,
+    "python.pythonPath": "D:\\Proyectos\\Python Pr\\Android dev\\android\\Scripts\\python.exe"
 }
