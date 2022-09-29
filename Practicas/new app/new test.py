@@ -13,7 +13,7 @@ for files in lista :
     if nombre.endswith('pdf') or nombre.endswith('epub') or nombre.endswith('cbr') or nombre.endswith('cbz'):
         nstring = nombre.split('.')
         print(nstring[0])"""
-
+import time
 import os
 """import os.path
 count = 0
@@ -31,9 +31,9 @@ for dirpath, dirnames, filenames in os.walk("D:\Documents\Libros de Dibujos\Mejo
 print("---------N° de archivos detectados:",count,"-----------")"""
 
 import os.path
-def extract_path_name_type (searchers):
+def extract_path_name_type (searchers,direccion_carpeta):
     count = 0
-    for dirpath, dirnames, filenames in os.walk("D:\Documents\Libros de Dibujos\Mejores"):
+    for dirpath, dirnames, filenames in os.walk(direccion_carpeta):
         for filename in [f for f in filenames if f.endswith(searchers)]:
             print(filename,"------------------------")  #nombre de archivo.txt
             direccion_libro = os.path.join(dirpath, filename)
@@ -47,8 +47,16 @@ def extract_path_name_type (searchers):
             
     print("---------N° de archivos detectados:",count,"-----------")
 
+start_wtime = time.time()
+start_ptime = time.process_time()
+
 search_for =["pdf","epub","cbr","cbz","mobi"]
 to_search = tuple(search_for)
 
-extract_path_name_type(to_search)
+directorio = "D:\Documents\Libros de Dibujos\Mejores"
+extract_path_name_type(to_search,directorio)
+end_wtime = time.time()
+end_ptime = time.process_time()
+print("Time for execution (Wall-Clock Time) :",(end_wtime-start_wtime)*1000,"ms")
+print("Time for execution (CPU time)",(end_ptime-start_ptime)*1000,"ms")
 print("-------------------end-------------------------")
