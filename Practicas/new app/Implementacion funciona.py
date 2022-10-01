@@ -16,10 +16,9 @@ def insert_variables_libros(lista):
             record = cursor.fetchone()
             print("Conectado a la Base de Datos: ", record)
             '''realizando un insert a la tabla de libros'''
-            for x, y in lista:
-                INSERT_Query = f"INSERT INTO libros (nombre_libro,direccion_libro) values ('{x}','{y}');"
-                cursor.execute(INSERT_Query)
-                connection.commit()
+            INSERT_Query = f"INSERT INTO libros (nombre_libro,direccion_libro) values {lista};"
+            cursor.execute(INSERT_Query)
+            connection.commit()
             print(cursor.rowcount,"lista se añadio en la base de datos con exito!!!")
             cursor.close()
         
@@ -50,9 +49,8 @@ def extract_path_name_type (searchers,direccion_carpeta):
             nom_libro = "".join(nombre_libro_ext_lista)
             nom_libro = nom_libro.replace("'", r"\'")
             nom_libro = nom_libro.replace('"', r'\"')
-            LL_D.append((nom_libro,direccion_libro))
-            count += 1
-            
+            LL_D.append(f"('{nom_libro}','{direccion_libro}')")
+            count += 1            
     print("---------N° de archivos detectados:",count,"-----------")
     return(LL_D)
 
@@ -63,9 +61,9 @@ search_for =["pdf","epub","cbr","cbz","mobi"]
 to_search = tuple(search_for)
 
 directorio = "D:\Documents\Libros de Dibujos\Mejores"
-lista = extract_path_name_type(to_search,directorio)
+lista_str =",".join(extract_path_name_type(to_search,directorio))
 
-insert_variables_libros(lista)
+insert_variables_libros(lista_str)
 
 end_wtime = time.time()
 end_ptime = time.process_time()

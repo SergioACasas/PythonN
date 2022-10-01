@@ -50,7 +50,7 @@ def extract_path_name_type (searchers,direccion_carpeta):
             nom_libro = "".join(nombre_libro_ext_lista)
             nom_libro = nom_libro.replace("'", r"\'")
             nom_libro = nom_libro.replace('"', r'\"')
-            LL_D.append(f"({nom_libro},{direccion_libro})")
+            LL_D.append(f"('{nom_libro}','{direccion_libro}')")
             count += 1
             
     print("---------N° de archivos detectados:",count,"-----------")
@@ -62,9 +62,8 @@ search_for =["pdf","epub","cbr","cbz","mobi"]
 to_search = tuple(search_for)
 
 directorio = "D:\Documents\Libros de Dibujos\Mejores"
-names = extract_path_name_type(to_search,directorio)
-names = ",".join(names)
-print(names)
+names =",".join(extract_path_name_type(to_search,directorio))
+print("-----------------------------------------insert into libros(nombres) values",names)
 #print(f"SIGUIENTES:------------------{}-----------------------------------------------")
 #print(",".join(search_for))
 end_wtime = time.time()
